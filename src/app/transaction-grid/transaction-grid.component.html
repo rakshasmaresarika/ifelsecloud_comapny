@@ -1,0 +1,19 @@
+<h5>Transaction </h5>
+<table class="table table-hover">
+
+  <tbody>
+    <tr *ngFor="let transaction of transactions">
+       <!-- can add image dynamically but for now its hardcoded -->
+       <td> <img src="../../assets/user (1).png" alt="Profile Photo" height="30"></td>
+       <!-- image dynamically here -->
+      <!-- <td><img [src]="transaction.picture" alt="profilephoto"></td>  -->
+      <td>{{ transaction.name }}</td>
+      <td>{{ transaction.company}}</td>
+      <td>{{ transaction.registered |date: 'shortDate' }}</td>
+      <td>{{ transaction.registered | date: 'mediumTime'}}</td>
+      <td>$ {{ transaction.balance}}</td>
+      <td [ngStyle]="{'color':transaction.status == 'pending' ? 'red' : 'green' }">{{ transaction.status}}</td>
+    </tr>
+
+  </tbody>
+</table>

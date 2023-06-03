@@ -1,0 +1,12 @@
+#option{
+    float: right !important;
+}
+
+.top-cards:first-child{
+    .card{
+        background-color: #4747d5;
+        i, p, h5{
+            color: white;
+        }
+    }
+}
